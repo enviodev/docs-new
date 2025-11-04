@@ -1,0 +1,16 @@
+{
+  "name": "envio-docs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "mint dev",
+    "update-endpoints": "node ./scripts/update-endpoints.mjs"
+  },
+  "engines": {
+    "node": ">=20.0"
+  },
+  "devDependencies": {
+    "mint": "^4.2.186"
+  }
+}
+

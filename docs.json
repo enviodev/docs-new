@@ -1,0 +1,499 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Envio",
+  "colors": {
+    "primary": "#16A34A",
+    "light": "#07C983",
+    "dark": "#15803D"
+  },
+  "favicon": "/static/envio-logos/envio-logo.png",
+  "styles": [
+    "custom_css/navbar.css",
+    "custom_css/sidebar.css",
+    "custom_css/infobox.css"
+  ],
+  "scripts": [
+    "custom_css/sidebar-icons.js"
+  ],
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "HyperIndex",
+        "groups": [
+          {
+            "group": "Introduction",
+            "expanded": true,
+            "pages": [
+              "HyperIndex/Introduction/overview",
+              "HyperIndex/Introduction/getting-started",
+              "HyperIndex/Introduction/contract-import",
+              "HyperIndex/Introduction/benchmarks",
+              "HyperIndex/Introduction/migration-guide"
+            ]
+          },
+          {
+            "group": "Guides",
+            "expanded": true,
+            "pages": [
+              "HyperIndex/Guides/configuration-file",
+              "HyperIndex/Guides/schema-file",
+              "HyperIndex/Guides/event-handlers",
+              "HyperIndex/Guides/block-handlers",
+              "HyperIndex/Advanced/multichain-indexing",
+              "HyperIndex/Guides/testing",
+              "HyperIndex/Guides/navigating-hasura",
+              "HyperIndex/Guides/environment-variables"
+            ]
+          },
+          {
+            "group": "Examples",
+            "expanded": true,
+            "pages": [
+              "HyperIndex/Examples/example-uniswap-v4",
+              "HyperIndex/Examples/example-sablier",
+              "HyperIndex/Examples/example-velodrome-aerodrome"
+            ]
+          },
+          {
+            "group": "Hosted Service",
+            "expanded": true,
+            "pages": [
+              "HyperIndex/Hosted_Service/hosted-service",
+              "HyperIndex/Hosted_Service/hosted-service-features",
+              "HyperIndex/Hosted_Service/hosted-service-deployment",
+              "HyperIndex/Hosted_Service/hosted-service-monitoring",
+              "HyperIndex/Hosted_Service/hosted-service-billing",
+              "HyperIndex/Hosted_Service/self-hosting"
+            ]
+          },
+          {
+            "group": "Tutorials",
+            "expanded": true,
+            "pages": [
+              "HyperIndex/Tutorials/tutorial-op-bridge-deposits",
+              "HyperIndex/Tutorials/tutorial-erc20-token-transfers",
+              "HyperIndex/Tutorials/tutorial-indexing-fuel",
+              "HyperIndex/Tutorials/greeter-tutorial",
+              "HyperIndex/Tutorials/price-data",
+              "HyperIndex/Tutorials/tutorial-scaffold-eth-2"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "expanded": true,
+            "pages": [
+              "HyperIndex/Advanced/dynamic-contracts",
+              "HyperIndex/Advanced/wildcard-indexing",
+              "HyperIndex/Advanced/preload-optimization",
+              "HyperIndex/Advanced/effect-api",
+              "HyperIndex/Advanced/accessing-contract-state",
+              "HyperIndex/Advanced/ipfs",
+              "HyperIndex/Advanced/hypersync",
+              "HyperIndex/Advanced/rpc-sync",
+              "HyperIndex/Advanced/config-schema-reference",
+              "HyperIndex/Advanced/cli-commands",
+              "HyperIndex/Advanced/reorgs-support",
+              "HyperIndex/Advanced/generated-files",
+              "HyperIndex/Advanced/metadata-query",
+              "HyperIndex/Advanced/terminology",
+              "HyperIndex/Advanced/performance/database-performance-optimization",
+              "HyperIndex/Advanced/performance/latency-at-head",
+              "HyperIndex/Advanced/performance/benchmarking",
+              "HyperIndex/Advanced/loaders"
+            ]
+          },
+          {
+            "group": "Troubleshoot",
+            "expanded": true,
+            "pages": [
+              "HyperIndex/Troubleshoot/logging",
+              "HyperIndex/Troubleshoot/common-issues",
+              "HyperIndex/Troubleshoot/error-codes",
+              "HyperIndex/Troubleshoot/reserved-words"
+            ]
+          },
+          {
+            "group": "Supported Networks",
+            "expanded": false,
+            "pages": [
+              "HyperIndex/supported-networks/index",
+              "HyperIndex/supported-networks/any-evm-with-rpc",
+              "HyperIndex/supported-networks/local-anvil",
+              "HyperIndex/supported-networks/local-hardhat",
+              "HyperIndex/supported-networks/0g-newton-testnet",
+              "HyperIndex/supported-networks/abstract",
+              "HyperIndex/supported-networks/aleph-zero-evm",
+              "HyperIndex/supported-networks/altlayer-op-demo-testnet",
+              "HyperIndex/supported-networks/ancient8",
+              "HyperIndex/supported-networks/arbitrum",
+              "HyperIndex/supported-networks/arbitrum-blueberry",
+              "HyperIndex/supported-networks/arbitrum-nova",
+              "HyperIndex/supported-networks/arbitrum-sepolia",
+              "HyperIndex/supported-networks/artela-testnet",
+              "HyperIndex/supported-networks/arthera-mainnet",
+              "HyperIndex/supported-networks/asset-chain-mainnet",
+              "HyperIndex/supported-networks/astar-zkevm",
+              "HyperIndex/supported-networks/astar-zkyoto",
+              "HyperIndex/supported-networks/aurora",
+              "HyperIndex/supported-networks/aurora-turbo",
+              "HyperIndex/supported-networks/avalanche",
+              "HyperIndex/supported-networks/b2-hub-testnet",
+              "HyperIndex/supported-networks/b3",
+              "HyperIndex/supported-networks/b3-sepolia-testnet",
+              "HyperIndex/supported-networks/base",
+              "HyperIndex/supported-networks/base-sepolia",
+              "HyperIndex/supported-networks/beam",
+              "HyperIndex/supported-networks/berachain",
+              "HyperIndex/supported-networks/berachain-artio-testnet",
+              "HyperIndex/supported-networks/bevm-mainnet",
+              "HyperIndex/supported-networks/bevm-testnet",
+              "HyperIndex/supported-networks/bitfinity-mainnet",
+              "HyperIndex/supported-networks/bitfinity-testnet",
+              "HyperIndex/supported-networks/bitgert-mainnet",
+              "HyperIndex/supported-networks/bitlayer",
+              "HyperIndex/supported-networks/blast",
+              "HyperIndex/supported-networks/blast-sepolia",
+              "HyperIndex/supported-networks/bob-mainnet",
+              "HyperIndex/supported-networks/boba",
+              "HyperIndex/supported-networks/boba-bnb-mainnet",
+              "HyperIndex/supported-networks/botanix-testnet",
+              "HyperIndex/supported-networks/bsc",
+              "HyperIndex/supported-networks/bsc-testnet",
+              "HyperIndex/supported-networks/canto",
+              "HyperIndex/supported-networks/canto-testnet",
+              "HyperIndex/supported-networks/celo",
+              "HyperIndex/supported-networks/celo-alfajores-testnet",
+              "HyperIndex/supported-networks/chainweb-testnet-20",
+              "HyperIndex/supported-networks/chainweb-testnet-21",
+              "HyperIndex/supported-networks/chainweb-testnet-22",
+              "HyperIndex/supported-networks/chainweb-testnet-23",
+              "HyperIndex/supported-networks/chainweb-testnet-24",
+              "HyperIndex/supported-networks/chiliz",
+              "HyperIndex/supported-networks/chiliz-testnet-spicy",
+              "HyperIndex/supported-networks/citrea-devnet",
+              "HyperIndex/supported-networks/citrea-testnet",
+              "HyperIndex/supported-networks/core",
+              "HyperIndex/supported-networks/creator-testnet",
+              "HyperIndex/supported-networks/cronos-zkevm",
+              "HyperIndex/supported-networks/cronos-zkevm-testnet",
+              "HyperIndex/supported-networks/crossfi-mainnet",
+              "HyperIndex/supported-networks/crossfi-testnet",
+              "HyperIndex/supported-networks/curtis",
+              "HyperIndex/supported-networks/cyber",
+              "HyperIndex/supported-networks/damon",
+              "HyperIndex/supported-networks/degen-chain",
+              "HyperIndex/supported-networks/dfk-chain",
+              "HyperIndex/supported-networks/dogechain-mainnet",
+              "HyperIndex/supported-networks/dogechain-testnet",
+              "HyperIndex/supported-networks/dos-chain",
+              "HyperIndex/supported-networks/energy-web",
+              "HyperIndex/supported-networks/eos",
+              "HyperIndex/supported-networks/eth",
+              "HyperIndex/supported-networks/etherlink-testnet",
+              "HyperIndex/supported-networks/exosama",
+              "HyperIndex/supported-networks/fantom",
+              "HyperIndex/supported-networks/fantom-testnet",
+              "HyperIndex/supported-networks/flare",
+              "HyperIndex/supported-networks/flare-songbird",
+              "HyperIndex/supported-networks/flow",
+              "HyperIndex/supported-networks/flow-testnet",
+              "HyperIndex/supported-networks/fraxtal",
+              "HyperIndex/supported-networks/fuel-mainnet",
+              "HyperIndex/supported-networks/fuel-testnet",
+              "HyperIndex/supported-networks/fuji",
+              "HyperIndex/supported-networks/gnosis",
+              "HyperIndex/supported-networks/gnosis-chiado",
+              "HyperIndex/supported-networks/gravity-alpha-mainnet",
+              "HyperIndex/supported-networks/harmony-shard-0",
+              "HyperIndex/supported-networks/heco-chain",
+              "HyperIndex/supported-networks/holesky",
+              "HyperIndex/supported-networks/hyperliquid",
+              "HyperIndex/supported-networks/immutable-zkevm",
+              "HyperIndex/supported-networks/immutable-zkevm-testnet",
+              "HyperIndex/supported-networks/incentiv",
+              "HyperIndex/supported-networks/ink",
+              "HyperIndex/supported-networks/iotex-network",
+              "HyperIndex/supported-networks/japan-open-chain",
+              "HyperIndex/supported-networks/kaia",
+              "HyperIndex/supported-networks/kakarot-starknet-sepolia",
+              "HyperIndex/supported-networks/kroma",
+              "HyperIndex/supported-networks/layeredge-testnet",
+              "HyperIndex/supported-networks/lightlink-pegasus-testnet",
+              "HyperIndex/supported-networks/lightlink-phoenix",
+              "HyperIndex/supported-networks/linea",
+              "HyperIndex/supported-networks/lisk",
+              "HyperIndex/supported-networks/lukso",
+              "HyperIndex/supported-networks/lukso-testnet",
+              "HyperIndex/supported-networks/manta",
+              "HyperIndex/supported-networks/manta-pacific-sepolia",
+              "HyperIndex/supported-networks/mantle",
+              "HyperIndex/supported-networks/megaeth-testnet",
+              "HyperIndex/supported-networks/megaeth-testnet2",
+              "HyperIndex/supported-networks/merlin",
+              "HyperIndex/supported-networks/metall2",
+              "HyperIndex/supported-networks/meter-mainnet",
+              "HyperIndex/supported-networks/meter-testnet",
+              "HyperIndex/supported-networks/mev-commit",
+              "HyperIndex/supported-networks/mint-mainnet",
+              "HyperIndex/supported-networks/mode",
+              "HyperIndex/supported-networks/monad-testnet",
+              "HyperIndex/supported-networks/moonbase-alpha",
+              "HyperIndex/supported-networks/moonbeam",
+              "HyperIndex/supported-networks/morph",
+              "HyperIndex/supported-networks/nautilus",
+              "HyperIndex/supported-networks/neo-x-testnet",
+              "HyperIndex/supported-networks/nibiru-testnet",
+              "HyperIndex/supported-networks/now-chaint",
+              "HyperIndex/supported-networks/oasis-emerald",
+              "HyperIndex/supported-networks/oasis-sapphire",
+              "HyperIndex/supported-networks/onigiri-subnet",
+              "HyperIndex/supported-networks/onigiri-test-subnet",
+              "HyperIndex/supported-networks/ontology-mainnet",
+              "HyperIndex/supported-networks/ontology-testnet",
+              "HyperIndex/supported-networks/op-celestia-raspberry",
+              "HyperIndex/supported-networks/opbnb",
+              "HyperIndex/supported-networks/optimism",
+              "HyperIndex/supported-networks/optimism-sepolia",
+              "HyperIndex/supported-networks/optopia",
+              "HyperIndex/supported-networks/peaq",
+              "HyperIndex/supported-networks/plasma",
+              "HyperIndex/supported-networks/plume",
+              "HyperIndex/supported-networks/polygon",
+              "HyperIndex/supported-networks/polygon-amoy",
+              "HyperIndex/supported-networks/polygon-zkevm",
+              "HyperIndex/supported-networks/polygon-zkevm-cardona-testnet",
+              "HyperIndex/supported-networks/public-goods-network",
+              "HyperIndex/supported-networks/pulsechain",
+              "HyperIndex/supported-networks/puppynet-shibarium",
+              "HyperIndex/supported-networks/ronin",
+              "HyperIndex/supported-networks/rootstock",
+              "HyperIndex/supported-networks/saakuru",
+              "HyperIndex/supported-networks/satoshivm",
+              "HyperIndex/supported-networks/scroll",
+              "HyperIndex/supported-networks/scroll-sepolia",
+              "HyperIndex/supported-networks/sentient-testnet",
+              "HyperIndex/supported-networks/sepolia",
+              "HyperIndex/supported-networks/shibarium",
+              "HyperIndex/supported-networks/shimmer-evm",
+              "HyperIndex/supported-networks/skale-europa",
+              "HyperIndex/supported-networks/soneium",
+              "HyperIndex/supported-networks/sonic",
+              "HyperIndex/supported-networks/sophon",
+              "HyperIndex/supported-networks/sophon-testnet",
+              "HyperIndex/supported-networks/stratovm-testnet",
+              "HyperIndex/supported-networks/superseed",
+              "HyperIndex/supported-networks/superseed-sepolia-testnet",
+              "HyperIndex/supported-networks/swell",
+              "HyperIndex/supported-networks/taiko",
+              "HyperIndex/supported-networks/tangle",
+              "HyperIndex/supported-networks/tanssi-demo",
+              "HyperIndex/supported-networks/taraxa",
+              "HyperIndex/supported-networks/telos-evm-mainnet",
+              "HyperIndex/supported-networks/telos-evm-testnet",
+              "HyperIndex/supported-networks/torus-mainnet",
+              "HyperIndex/supported-networks/torus-testnet",
+              "HyperIndex/supported-networks/unichain",
+              "HyperIndex/supported-networks/unicorn-ultra-nebulas-testnet",
+              "HyperIndex/supported-networks/velas-mainnet",
+              "HyperIndex/supported-networks/viction",
+              "HyperIndex/supported-networks/worldchain",
+              "HyperIndex/supported-networks/x-layer-mainnet",
+              "HyperIndex/supported-networks/x-layer-testnet",
+              "HyperIndex/supported-networks/xdc",
+              "HyperIndex/supported-networks/xdc-testnet",
+              "HyperIndex/supported-networks/zeta",
+              "HyperIndex/supported-networks/zeta-testnet",
+              "HyperIndex/supported-networks/zircuit",
+              "HyperIndex/supported-networks/zklink-nova-mainnet",
+              "HyperIndex/supported-networks/zksync",
+              "HyperIndex/supported-networks/zksync-sepolia-testnet",
+              "HyperIndex/supported-networks/zora",
+              "HyperIndex/supported-networks/zora-sepolia"
+            ]
+          },
+          {
+            "group": "Other",
+            "expanded": true,
+            "pages": [
+              "HyperIndex/Other/fuel",
+              "HyperIndex/Other/licensing",
+              "HyperIndex/Other/terms-of-service",
+              "HyperIndex/Other/privacy-policy"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "HyperSync",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "expanded": true,
+            "pages": [
+              "HyperSync/overview",
+              "HyperSync/quickstart",
+              "HyperSync/hypersync-usage"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "expanded": true,
+            "pages": [
+              "HyperSync/hypersync-clients",
+              "HyperSync/hypersync-query",
+              "HyperSync/hypersync-presets",
+              "HyperSync/hypersync-curl-examples",
+              "HyperSync/api-tokens"
+            ]
+          },
+          {
+            "group": "Supported Networks",
+            "expanded": false,
+            "pages": [
+              "HyperSync/hypersync-supported-networks"
+            ]
+          },
+          {
+            "group": "Tutorials",
+            "expanded": true,
+            "pages": [
+              "HyperSync/Tutorials/tutorial-address-transactions"
+            ]
+          },
+          {
+            "group": "HyperFuel",
+            "expanded": true,
+            "pages": [
+              "HyperSync/HyperFuel/hyperfuel",
+              "HyperSync/HyperFuel/hyperfuel-query"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "HyperRPC",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "expanded": true,
+            "pages": [
+              "HyperRPC/overview",
+              "HyperRPC/hyperrpc-supported-networks"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Showcase",
+        "groups": [
+          {
+            "group": "Projects",
+            "expanded": true,
+            "pages": [
+              "Showcase/showcase"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Blog",
+        "groups": [
+          {
+            "group": "Articles",
+            "expanded": true,
+            "pages": [
+              "Blog/2023-08-08-methods-to-query-blockchain-data",
+              "Blog/2023-08-17-what-is-an-indexer",
+              "Blog/2023-08-22-envio-grant-program-is-live",
+              "Blog/2023-08-31-navigating-challenges-in-blockchain-indexing",
+              "Blog/2023-09-06-envio-community-update-1",
+              "Blog/2023-09-27-envio-community-update-2",
+              "Blog/2023-10-04-how-to-become-a-blockchain-dapp-developer",
+              "Blog/2023-10-19-envio-celebrates-first-grantee-project-multi-chain-liquidation-metrics-indexer",
+              "Blog/2023-10-24-indexer-benchmarking-results",
+              "Blog/2023-10-26-envio-community-update-3",
+              "Blog/2023-11-09-powers-of-dedicated-hosting-for-web3-apps",
+              "Blog/2023-11-15-simplify-data-retrieval-multi-chain-dapps",
+              "Blog/2023-11-23-envio-bounty-poap-multi-chain-indexer",
+              "Blog/2023-11-29-envio-community-update-4",
+              "Blog/2023-12-13-envio-bounty-erc4626-token-vault-indexer",
+              "Blog/2023-12-19-envio-community-update-5",
+              "Blog/2024-01-17-envio-empowers-jarvis-network",
+              "Blog/2024-01-31-envio-community-update-6",
+              "Blog/2024-02-12-envio-azuro-developer-grant-multi-chain-open-source-indexer",
+              "Blog/2024-02-20-envio-data-indexing-on-lukso",
+              "Blog/2024-03-01-envio-community-update-7",
+              "Blog/2024-03-27-envio-community-update-8",
+              "Blog/2024-03-27-envio-data-indexing-on-harmony",
+              "Blog/2024-03-28-envio-celebrates-azuro-indexer-grantee",
+              "Blog/2024-04-22-envio-hypersync-powers-data-access-on-fuel-network",
+              "Blog/2024-05-08-envio-community-update-9",
+              "Blog/2024-05-24-case-study-peppy-finance",
+              "Blog/2024-05-30-envio-community-update-may-2024",
+              "Blog/2024-07-01-envio-community-update-june-2024",
+              "Blog/2024-07-17-case-study-gblast",
+              "Blog/2024-07-18-data-indexing-on-fuel",
+              "Blog/2024-08-02-envio-community-update-july-2024",
+              "Blog/2024-08-13-case-study-sablier",
+              "Blog/2024-08-19-building-chaindensity",
+              "Blog/2024-09-02-envio-community-update-aug-2024",
+              "Blog/2024-09-27-case-study-limitless",
+              "Blog/2024-10-02-envio-community-update-sep-2024",
+              "Blog/2024-10-09-case-study-bridgg-op-superchain",
+              "Blog/2024-10-15-ethonline24-envio-hackathon-winners",
+              "Blog/2024-10-29-envio-community-update-oct-2024",
+              "Blog/2024-11-08-hosted-service-v2",
+              "Blog/2024-11-13-how-to-cut-aws-cloud-costs",
+              "Blog/2024-11-26-indexing-and-reorgs",
+              "Blog/2024-11-28-envio-community-update-november-2024",
+              "Blog/2024-12-09-tokenizing-real-world-assets",
+              "Blog/2024-12-18-case-study-zkpass",
+              "Blog/2024-12-24-envio-community-update-december",
+              "Blog/2025-01-21-what-is-a-blockchain-indexer",
+              "Blog/2025-01-30-envio-developer-update-january",
+              "Blog/2025-02-27-envio-dev-update-feb",
+              "Blog/2025-03-17-what-is-multi-chain-indexing",
+              "Blog/2025-03-26-envio-supports-70-networks",
+              "Blog/2025-03-31-envio-dev-update-march-2025",
+              "Blog/2025-04-15-oracle-wars",
+              "Blog/2025-04-25-developer-update-april-2025",
+              "Blog/2025-05-16-monad-hackathon-winners-2025",
+              "Blog/2025-05-29-developer-update-may-2025",
+              "Blog/2025-06-12-how-to-index-monad-data-using-envio",
+              "Blog/2025-06-17-how-to-index-megaeth-data-using-envio",
+              "Blog/2025-06-24-building-visualizers-and-dashboards-on-monad",
+              "Blog/2025-06-24-dev-update-june-2025",
+              "Blog/2025-07-30-dev-update-july-2025",
+              "Blog/2025-08-29-dev-update-august-2025",
+              "Blog/2025-09-30-dev-update-september-2025"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/static/envio-logos/envio-logo.png",
+    "dark": "/static/envio-logos/envio-logo.png"
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/envio_indexer",
+      "github": "https://github.com/enviodev",
+      "discord": "https://discord.gg/Q9qt8gZ2fX"
+    }
+  }
+}
