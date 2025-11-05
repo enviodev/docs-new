@@ -1,5 +1,5 @@
 // Add unique icons to sidebar group headings
-const DEFAULT_COLLAPSED = ['Supported Networks', 'Advanced', 'Troubleshoot', 'Tutorials', 'HyperFuel', 'Projects', 'Articles'];
+const DEFAULT_COLLAPSED = ['Supported Networks', 'Advanced', 'Troubleshoot', 'Tutorials'];
 
 const ICON_MAP = {
   'Introduction': '›',
