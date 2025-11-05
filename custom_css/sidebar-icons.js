@@ -1,4 +1,25 @@
 // Add unique icons to sidebar group headings
+const DEFAULT_COLLAPSED = ['Supported Networks', 'Advanced', 'Troubleshoot', 'Guides', 'Examples', 'Hosted Service', 'Tutorials', 'HyperFuel', 'Projects', 'Articles'];
+
+const ICON_MAP = {
+  'Introduction': '›',
+  'Guides': '≡',
+  'Examples': '◦',
+  'Hosting': '↑',
+  'Hosted Service': '↑',
+  'Tutorials': '⌘',
+  'Advanced': '⚙',
+  'Troubleshoot': '⚠',
+  'Supported Networks': '◉',
+  'Other': '···',
+  'Getting Started': '›',
+  'Core Features': '■',
+  'HyperFuel': '▸',
+  'Projects': '□',
+  'Articles': '≡'
+};
+
+
 (function() {
   // Wait for DOM to be ready
   if (document.readyState === 'loading') {
@@ -8,32 +29,12 @@
   }
 
   function addSidebarIcons() {
-    // Map group names to simple text symbols
-    const iconMap = {
-      'Introduction': '›',
-      'Guides': '≡',
-      'Examples': '◦',
-      'Hosting': '↑',
-      'Hosted Service': '↑',
-      'Tutorials': '⌘',
-      'Advanced': '⚙',
-      'Troubleshoot': '⚠',
-      'Supported Networks': '◉',
-      'Other': '···',
-      'Getting Started': '›',
-      'Getting started': '›',
-      'Core Features': '■',
-      'HyperFuel': '▸',
-      'Projects': '□',
-      'Articles': '≡'
-    };
-
     // Find all sidebar group titles
     const groupTitles = document.querySelectorAll('.sidebar-group-header h5#sidebar-title');
     
     groupTitles.forEach(title => {
       const text = title.textContent.trim();
-      const icon = iconMap[text];
+      const icon = ICON_MAP[text];
       
       if (icon && !title.dataset.iconAdded) {
         // Create icon span
@@ -96,33 +97,47 @@
       // Ensure we have a clean group name
       groupName = groupName.replace(/^[›≡◦↑⌘⚙⚠◉···□]\s*/, '').trim();
       
-      const isSupportedNetworks = groupName === 'Supported Networks';
+      const isDefaultCollapsed = DEFAULT_COLLAPSED.includes(groupName);
       
-      // Find the parent group container - use closest to find the container with mt-6 or lg:mt-8 classes
-      let groupContainer = header.closest('[class*="mt-6"]');
-      if (!groupContainer) {
-        groupContainer = header.closest('[class*="lg:mt-8"]');
-      }
-      if (!groupContainer) {
-        // Fallback: find parent that contains ul or #sidebar-group
-        groupContainer = header.parentElement;
-        let depth = 0;
-        while (groupContainer && groupContainer !== document.body && depth < 5) {
-          if (groupContainer.querySelector('ul, #sidebar-group')) {
+      // Find the parent group container - walk up to find the direct child div of #navigation-items
+      // This is much more reliable than looking for CSS classes like mt-6 or lg:mt-8
+      const navigationItems = document.getElementById('navigation-items');
+      let groupContainer = null;
+      
+      if (navigationItems) {
+        // Walk up from the header to find which direct child div of #navigation-items contains it
+        let current = header;
+        while (current && current !== navigationItems) {
+          // Check if current element is a direct child of #navigation-items
+          if (current.parentElement === navigationItems) {
+            groupContainer = current;
             break;
           }
-          groupContainer = groupContainer.parentElement;
+          current = current.parentElement;
+        }
+      }
+      
+      // Fallback: if we couldn't find it via #navigation-items, use closest div that contains #sidebar-group
+      if (!groupContainer) {
+        let current = header.parentElement;
+        let depth = 0;
+        while (current && current !== document.body && depth < 10) {
+          if (current.querySelector('#sidebar-group')) {
+            groupContainer = current;
+            break;
+          }
+          current = current.parentElement;
           depth++;
         }
       }
       
-      // Final fallback
+      // Final fallback: use the parent element
       if (!groupContainer || groupContainer === document.body) {
         groupContainer = header.parentElement;
       }
       
       // Set initial state: collapsed for Supported Networks, expanded for others
-      if (isSupportedNetworks) {
+      if (isDefaultCollapsed) {
         groupContainer.classList.add('collapsed');
         header.classList.add('collapsed');
       } else {
@@ -169,4 +184,5 @@
     setupCollapsibleGroups();
   }
 })();
+
 

@@ -126,22 +126,16 @@
 }
 
 /* Collapsed state - hide group content */
-[class*="mt-6"].collapsed ul,
-[class*="lg:mt-8"].collapsed ul,
-[class*="mt-6"].collapsed #sidebar-group,
-[class*="lg:mt-8"].collapsed #sidebar-group,
-[class*="mt-6"].collapsed [class*="space-y"],
-[class*="lg:mt-8"].collapsed [class*="space-y"] {
+#navigation-items > div.collapsed ul,
+#navigation-items > div.collapsed #sidebar-group,
+#navigation-items > div.collapsed [class*="space-y"] {
   display: none !important;
 }
 
 /* Expanded state - show group content (default state) */
-[class*="mt-6"]:not(.collapsed) ul,
-[class*="lg:mt-8"]:not(.collapsed) ul,
-[class*="mt-6"]:not(.collapsed) #sidebar-group,
-[class*="lg:mt-8"]:not(.collapsed) #sidebar-group,
-[class*="mt-6"]:not(.collapsed) [class*="space-y"],
-[class*="lg:mt-8"]:not(.collapsed) [class*="space-y"] {
+#navigation-items > div:not(.collapsed) ul,
+#navigation-items > div:not(.collapsed) #sidebar-group,
+#navigation-items > div:not(.collapsed) [class*="space-y"] {
   display: block !important;
 }
 
