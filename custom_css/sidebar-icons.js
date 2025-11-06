@@ -5,7 +5,6 @@ const ICON_MAP = {
   'Introduction': '›',
   'Guides': '≡',
   'Examples': '◦',
-  'Hosting': '↑',
   'Hosted Service': '↑',
   'Tutorials': '⌘',
   'Advanced': '⚙',

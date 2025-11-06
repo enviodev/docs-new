@@ -495,5 +495,10 @@
       "github": "https://github.com/enviodev",
       "discord": "https://discord.gg/Q9qt8gZ2fX"
     }
+  },
+  "seo": {
+    "metatags": {
+      "robots": "noindex, nofollow"
+    }
   }
 }
